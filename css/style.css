@@ -830,3 +830,51 @@ padding:25px;
 }
 
 }
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.mobile-active{
+
+display:flex !important;
+
+flex-direction:column;
+
+position:absolute;
+
+top:85px;
+
+left:0;
+
+width:100%;
+
+padding:30px;
+
+background:#ffffff;
+
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:all .6s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
