@@ -1,0 +1,832 @@
+/* ==========================================
+   ALPHA MAIL WEBSITE
+   MASTER STYLESHEET v1.0
+========================================== */
+
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+
+
+/* ==========================================
+   ROOT VARIABLES
+========================================== */
+
+:root{
+
+--primary:#0E7C96;
+
+--primary-dark:#083B55;
+
+--accent:#D9923B;
+
+--white:#FFFFFF;
+
+--light:#F7F9FA;
+
+--grey:#ECEFF1;
+
+--text:#1F2933;
+
+--border:#DDE3E8;
+
+--shadow:0 8px 25px rgba(0,0,0,0.08);
+
+--transition:0.3s ease;
+
+}
+
+
+/* ==========================================
+   GLOBAL RESET
+========================================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Open Sans',sans-serif;
+
+color:var(--text);
+
+background:var(--white);
+
+line-height:1.6;
+
+overflow-x:hidden;
+
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,h2,h3,h4,h5{
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:700;
+
+}
+
+h1{
+
+font-size:3rem;
+
+}
+
+h2{
+
+font-size:2.25rem;
+
+margin-bottom:25px;
+
+}
+
+h3{
+
+font-size:1.35rem;
+
+margin-bottom:15px;
+
+}
+
+p{
+
+font-size:1rem;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+img{
+
+display:block;
+
+max-width:100%;
+
+}
+
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.container{
+
+width:90%;
+
+max-width:1300px;
+
+margin:auto;
+
+}
+
+section{
+
+padding:80px 0;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+background:#fff;
+
+box-shadow:0 2px 12px rgba(0,0,0,.08);
+
+}
+
+.navbar{
+
+max-width:1400px;
+
+margin:auto;
+
+height:85px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 30px;
+
+}
+
+.logo-container{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo-container img{
+
+width:60px;
+
+}
+
+.logo-container h1{
+
+font-size:28px;
+
+}
+
+.logo-container p{
+
+font-size:13px;
+
+font-weight:600;
+
+color:var(--accent);
+
+}
+
+.nav-links{
+
+display:flex;
+
+list-style:none;
+
+gap:28px;
+
+}
+
+.nav-links a{
+
+font-family:'Montserrat';
+
+font-weight:600;
+
+padding-bottom:6px;
+
+transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-links a.active{
+
+border-bottom:3px solid var(--accent);
+
+}
+
+.mobile-menu{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+
+/* ==========================================
+   HERO BANNER
+========================================== */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero img{
+
+width:100%;
+
+height:700px;
+
+object-fit:cover;
+
+}
+
+.hero-content{
+
+position:absolute;
+
+top:50%;
+
+left:8%;
+
+transform:translateY(-50%);
+
+max-width:700px;
+
+}
+
+.hero-content h1{
+
+color:#fff;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+color:#fff;
+
+margin-bottom:30px;
+
+}
+
+
+/* ==========================================
+   PAGE BANNERS
+========================================== */
+
+.page-banner{
+
+position:relative;
+
+height:450px;
+
+overflow:hidden;
+
+}
+
+.page-banner img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.page-banner::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+
+90deg,
+
+rgba(8,59,85,.85),
+
+rgba(8,59,85,.55),
+
+rgba(8,59,85,.10)
+
+);
+
+}
+
+.page-banner-content{
+
+position:absolute;
+
+top:50%;
+
+left:8%;
+
+transform:translateY(-50%);
+
+z-index:2;
+
+color:#fff;
+
+max-width:600px;
+
+}
+
+.page-banner-content h1{
+
+margin-bottom:15px;
+
+}
+
+.page-banner-content p{
+
+font-size:1.25rem;
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn-primary{
+
+display:inline-block;
+
+background:var(--primary);
+
+color:#fff;
+
+padding:14px 28px;
+
+border-radius:8px;
+
+font-weight:700;
+
+font-family:'Montserrat';
+
+transition:var(--transition);
+
+cursor:pointer;
+
+border:none;
+
+}
+
+.btn-primary:hover{
+
+background:var(--primary-dark);
+
+transform:translateY(-2px);
+
+}
+
+.btn-secondary{
+
+display:inline-block;
+
+padding:14px 28px;
+
+border:2px solid var(--primary);
+
+border-radius:8px;
+
+font-weight:700;
+
+transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:15px;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.card p{
+
+color:#666;
+
+}
+
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.statistics{
+
+background:var(--light);
+
+}
+
+
+/* ==========================================
+   DOCUMENT GRID
+========================================== */
+
+.document-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* ==========================================
+   TRACKING
+========================================== */
+
+.tracking-box{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:15px;
+
+margin-top:30px;
+
+}
+
+.tracking-box input{
+
+width:450px;
+
+padding:16px;
+
+font-size:16px;
+
+border:1px solid var(--border);
+
+border-radius:8px;
+
+}
+
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+max-width:800px;
+
+margin:auto;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+padding:16px;
+
+font-size:16px;
+
+border:1px solid var(--border);
+
+border-radius:8px;
+
+font-family:'Open Sans';
+
+}
+
+.contact-form textarea{
+
+height:200px;
+
+resize:none;
+
+}
+
+.contact-form input:focus,
+
+.contact-form textarea:focus{
+
+outline:none;
+
+border-color:var(--primary);
+
+}
+
+
+/* ==========================================
+   CONTACT BANNER
+========================================== */
+
+.contact-banner{
+
+background:var(--primary-dark);
+
+color:#fff;
+
+text-align:center;
+
+}
+
+.contact-banner h2{
+
+margin-bottom:20px;
+
+}
+
+.contact-banner p{
+
+margin-bottom:30px;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+background:var(--primary-dark);
+
+color:#fff;
+
+padding:60px 30px;
+
+}
+
+.footer-content{
+
+max-width:1300px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.footer-content img{
+
+width:90px;
+
+margin:auto;
+
+margin-bottom:20px;
+
+}
+
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+margin:35px 0;
+
+}
+
+.footer-links a{
+
+transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+color:var(--accent);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1000px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.mobile-menu{
+
+display:block;
+
+}
+
+.hero img{
+
+height:500px;
+
+}
+
+.page-banner{
+
+height:350px;
+
+}
+
+h1{
+
+font-size:2.3rem;
+
+}
+
+h2{
+
+font-size:1.9rem;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+section{
+
+padding:60px 0;
+
+}
+
+.hero-content,
+
+.page-banner-content{
+
+left:5%;
+
+right:5%;
+
+max-width:100%;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+}
+
+.tracking-box{
+
+flex-direction:column;
+
+}
+
+.tracking-box input{
+
+width:100%;
+
+}
+
+.logo-container h1{
+
+font-size:22px;
+
+}
+
+}
+
+
+@media(max-width:500px){
+
+.hero img{
+
+height:400px;
+
+}
+
+.page-banner{
+
+height:280px;
+
+}
+
+h1{
+
+font-size:2rem;
+
+}
+
+h2{
+
+font-size:1.6rem;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+}
